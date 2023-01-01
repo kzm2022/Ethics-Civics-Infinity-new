@@ -1322,9 +1322,9 @@ military_service = {
 		}
 	}
 	option = {
-		name = "all_people_are_soldiers_ges"
+		name = "guarded_node"
 		policy_flags = {
-			all_people_are_soldiers_ges
+			guarded_node
 		}
 		potential = {
 			OR = {
@@ -1343,13 +1343,134 @@ military_service = {
 			}
 		}
 		modifier = {
-			pop_defense_armies_add = 1
-			army_defense_health_mult = -0.6
-			army_defense_damage_mult = -0.6
+			job_warrior_drone_per_pop=0.02
 		}
 		AI_weight = {
-			factor = 1000
+			factor = 4
 		}
+	}
+	option = {
+		name = "basic_security"
+		policy_flags = {
+			basic_security
+		}
+		potential = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		modifier = {
+			job_warrior_drone_per_pop=0.05
+		}
+		AI_weight = {
+			factor = 6
+		}
+	}
+	option = {
+		name = "major_security"
+		policy_flags = {
+			major_security
+		}
+		potential = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		modifier = {
+			job_warrior_drone_per_pop=0.07
+		}
+		AI_weight = {
+			factor = 5
+		}
+	}
+	option = {
+		name = "comprehensive_security"
+		policy_flags = {
+			comprehensive_security
+		}
+		potential = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		modifier = {
+			job_warrior_drone_per_pop=0.1
+		}
+		AI_weight = {
+			factor = 3
+			modifier = {
+				factor = 20
+				is_at_war = yes
+				has_civic=civic_hive_devouring_swarm
+				has_civic = civic_machine_terminator
+			}
+		}
+	}
+	option = {
+		name = "wartime_deployment_protocl"
+		policy_flags = {
+			wartime_deployment_protocl
+		}
+		potential = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		valid = {
+			OR = {
+				has_ethic = ethic_gestalt_consciousness
+			    has_valid_civic = civic_network_of_the_mind
+			    has_valid_civic = civic_network_of_the_mind_machine
+			    has_valid_civic = civic_network_of_the_mind_true_hive
+			}
+		}
+		modifier = {
+
+			job_warrior_drone_per_pop=0.2
+		}
+		AI_weight = {
+			factor = 0.1
+			modifier = {
+				factor = 20
+				is_at_war = yes
+				}
+			}
 	}
 	option = {
 		name = "militia_association"
